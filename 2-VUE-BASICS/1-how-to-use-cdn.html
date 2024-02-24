@@ -9,10 +9,17 @@
 <body>
     <h1>Hello Haikal</h1>
     <div id="app">
-       <p>{{title}} - {{author}} - {{age}}</p>
-       <button v-on:click="age++">Increase age</button>
-       <button v-on:click="age--">Decrease age</button>
-       <div @click="changeTitle('Jagung')">Change title</div>
+        <div v-if="showBooks">
+            <p>{{title}} - {{author}} - {{age}}</p>
+        </div>
+
+        <button @click="toggleShowBooks">
+            <span v-if="showBooks">Hide Books</span>
+            <span v-else>Show Books</span>
+        </button>
+       
+        <div v-show="showBooks">Currently showing books</div>
+      
     </div>
     <script src="1-app.js"></script>
 </body>
