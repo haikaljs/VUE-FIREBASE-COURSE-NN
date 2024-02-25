@@ -6,9 +6,9 @@ const app = Vue.createApp({
             url: 'https://udemy.com',
             showBooks: false,
             books: [
-                {title: 'Name of the wind', author: 'patrick rothfuss', img: './assets/palestine.jpg'},
-                {title: 'the way of kings', author: 'brandon sanderson', img: 'assets/mosque.jpg'},
-                {title: 'final empire', author: 'brandon sanderson', img: 'assets/hero.jpg'},
+                {title: 'Name of the wind', author: 'patrick rothfuss', img: './assets/palestine.jpg', isFav: true},
+                {title: 'the way of kings', author: 'brandon sanderson', img: 'assets/mosque.jpg', isFav: false},
+                {title: 'final empire', author: 'brandon sanderson', img: 'assets/hero.jpg', isFav: true},
             ],
             title: 'The Haikal Cendol',
             author: 'Haikal Rozhan',
