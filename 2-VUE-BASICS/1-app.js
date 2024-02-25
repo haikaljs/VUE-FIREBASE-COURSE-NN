@@ -3,11 +3,12 @@ const app = Vue.createApp({
     // template: '<h2>Hi Haikal, you want to learn Vuejs</h2>'
     data(){
         return {
+            url: 'https://udemy.com',
             showBooks: false,
             books: [
-                {title: 'Name of the wind', author: 'patrick rothfuss'},
-                {title: 'the way of kings', author: 'brandon sanderson'},
-                {title: 'final empire', author: 'brandon sanderson'},
+                {title: 'Name of the wind', author: 'patrick rothfuss', img: './assets/palestine.jpg'},
+                {title: 'the way of kings', author: 'brandon sanderson', img: 'assets/mosque.jpg'},
+                {title: 'final empire', author: 'brandon sanderson', img: 'assets/hero.jpg'},
             ],
             title: 'The Haikal Cendol',
             author: 'Haikal Rozhan',
