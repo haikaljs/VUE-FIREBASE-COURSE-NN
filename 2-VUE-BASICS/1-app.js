@@ -15,6 +15,7 @@ const app = Vue.createApp({
             age: 32,
             x: 0,
             y: 0,
+            isFav: true
 
         }
     },
@@ -35,6 +36,9 @@ const app = Vue.createApp({
         handleMouseMove(e){
             this.x = e.offsetX
             this.y = e.offsetY 
+        },
+        toggleIsFav(book) {
+           book.isFav = !book.isFav   
         }
 
 

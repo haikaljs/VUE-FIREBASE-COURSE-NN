@@ -38,7 +38,7 @@
             <!-- <p>{{books[0].title}} - {{books[0].author}}</p>
             <p>{{books[1].title}} - {{books[1].author}}</p> -->
             <ul>
-                <li v-for="book in books" :class="{fav: book.isFav}">
+                <li v-for="book in books" :class="{fav: book.isFav}" @click="toggleIsFav(book)">
                     <img :src="book.img" alt="">
                     <h3>{{book.title}}</h3>
                     <p>{{book.author}}</p>
