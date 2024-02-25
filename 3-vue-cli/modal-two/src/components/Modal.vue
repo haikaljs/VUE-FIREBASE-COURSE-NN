@@ -1,3 +1,13 @@
+
+
+<template>
+<div class="backdrop" @click="closeModal">
+    <div class="modal" :class="{sale : theme === 'sale'}">
+        <h1>{{header}}</h1>
+        <p class="modal-content">{{text}}</p>
+    </div>
+</div>
+</template>
 <script>
 export default{
     props: ['header', 'text','theme'],
@@ -5,22 +15,21 @@ export default{
     return{
         title: 'Modal Title'
     }
-}
+
+    },
+    methods: {
+        closeModal(){
+            this.$emit('close')
+        }
+    }
 }
 
 </script>
 
-<template>
-<div class="backdrop">
-    <div class="modal" :class="{sale : theme === 'sale'}">
-        <h1>{{header}}</h1>
-        <p class="modal-content">{{text}}</p>
-    </div>
-</div>
-</template>
-
 <style scoped>
 .backdrop{
+    top: 0;
+    position: fixed;
     background: rgba(0, 0, 0, 0.5);
     width: 100vw;
     height: 100vh;

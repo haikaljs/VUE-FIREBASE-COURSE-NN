@@ -1,3 +1,17 @@
+
+
+<template>
+  <h1>Welcome to home page</h1>
+ <button @click="toggleModal">Open Modal</button>
+ <div v-if="showModal">
+  <Modal :header="header" :text="text" theme="sale" @close="toggleModal"/>
+  
+ </div>
+
+
+
+</template>
+
 <script>
 import Modal from "./components/Modal.vue"
 
@@ -9,18 +23,19 @@ export default {
       return{
         title: 'My first vue',
         header: "Sign up for the giveaway",
-        text: "Text description"
+        text: "Text description",
+        showModal: false
 
       }
+    },
+    methods: {
+      toggleModal(){
+        this.showModal = !this.showModal
+      }
     }
+    
 }
 </script>
-
-<template>
- 
-<Modal :header="header" :text="text" theme="sale"/>
-
-</template>
 
 <style>
 *{
