@@ -6,7 +6,9 @@ const app = Vue.createApp({
             showBooks: false,
             title: 'The Haikal Cendol',
             author: 'Haikal Rozhan',
-            age: 32
+            age: 32,
+            x: 0,
+            y: 0
         }
     },
     methods: {
@@ -17,8 +19,15 @@ const app = Vue.createApp({
         toggleShowBooks(){
              this.showBooks = !this.showBooks
         },
-        handleEvent(e){
-            console.log(e.type);
+        handleEvent(e,data){
+            console.log(e, e.type);
+            if(data){
+                console.log(data);
+            }
+        },
+        handleMouseMove(e){
+            this.x = e.offsetX
+            this.y = e.offsetY 
         }
 
 
