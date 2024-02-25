@@ -4,11 +4,17 @@ const app = Vue.createApp({
     data(){
         return {
             showBooks: false,
+            books: [
+                {title: 'Name of the wind', author: 'patrick rothfuss'},
+                {title: 'the way of kings', author: 'brandon sanderson'},
+                {title: 'final empire', author: 'brandon sanderson'},
+            ],
             title: 'The Haikal Cendol',
             author: 'Haikal Rozhan',
             age: 32,
             x: 0,
-            y: 0
+            y: 0,
+
         }
     },
     methods: {
